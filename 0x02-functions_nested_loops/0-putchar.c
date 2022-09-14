@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -10,16 +10,13 @@
  */
 int main(void)
 {
-	char ch[8] = "_putchar";
-		int i = 0;
-		char c;
+	char *sh = "_putchar";
 
-		while (i <= 8)
-		{
-			c = ch[i};
-			_putchar(c);
-			i++;
-		}
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
 
 	_putchar('\n');
 
