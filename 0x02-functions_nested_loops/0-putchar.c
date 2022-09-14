@@ -4,6 +4,9 @@
  * main - Entry point
  *
  * Return: always 0 (Success)
+ *
+ * Program to print _putchar
+ * followed by new line
  */
 int main(void)
 {
