@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 /**
  * main - Entry
  *
@@ -13,5 +13,6 @@
 		{
 			_putchar(c);
 		}
-		_putchar('\n')
+	}
+	_putchar('\n')
 }
