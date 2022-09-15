@@ -1,9 +1,6 @@
 #include "main.h"
 /**
  * print_last_digit - prints the last digit of a number
- * @n: number being tested
- *
- * Return: Always 0.
  */
 int print_last_digit(int r)
 {
@@ -14,5 +11,6 @@ int print_last_digit(int r)
 	else
 		n = r % 10;
 
-	_putchar(n + '10');
+	_putchar((n + '10') + '0');
 	return (n % 10);
+}
