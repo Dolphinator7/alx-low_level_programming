@@ -1,18 +1,13 @@
 #include "main.h"
 /**
  * print_last_digit - prints the last digit of a number
- * @r: number being tested
+ * @n: number being testedg
  *
- * Return: Always 0
+ * Return: Value of the last digit.
  */
-int main(void)
+int print_last_digit(int n)
 {
-	int r;
-
-	print_last_digit(98);
-	print_last_digit(0);
-	r = print_last_digit(-1024);
-	_putchar('0' + r);
-	_putchar('\n');
-	return (0);
+	int last_digit = n % 10;
+	_putchar("\n last_digit %d = %d", n, last_digit)
+	return 0;
 }
