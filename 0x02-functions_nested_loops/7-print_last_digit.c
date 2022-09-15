@@ -3,11 +3,14 @@
  * print_last_digit - prints the last digit of a number
  * @n: number being testedg
  *
- * Return: Value of the last digit.
+ * Return: Always 0.
  */
 int print_last_digit(int n)
 {
-	int last_digit = n % 10; _putchar("\n last_digit %d = %d", n,
-			last_digit)
-	return 0;
+	n = n % 10;
+
+	if (n < 0)
+		n = -n;
+		_putchar(n + '0');
+		return (n);
 }
