@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * puts2 - prints one char out of 2 of a string
+ * puts2 - prints every other character
  * @str: string
  *
  * Return: nothing
@@ -16,7 +16,7 @@ void puts2(char *str)
 	{
 		if (i % 2 == 0)
 			putchar(*(str + i));
-		a++;
+		i++;
 	}
 	putchar(10);
 }
