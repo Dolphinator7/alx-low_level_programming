@@ -3,18 +3,20 @@
 
 /**
  * puts2 - prints one char out of 2 of a string
- *@str: char being printed
+ * @str: string
+ *
+ * Return: nothing
  */
 
 void puts2(char *str)
 {
-	int a = 0;
+	int i = 0;
 
-	while (str[a] != '\0')
+	while (*(str + i) != '\0')
 	{
-		if ((a % 2) == 0)
-			_putchar(str[a]);
+		if (i % 2 == 0)
+			_putchar(*(str + i));
 		a++;
 	}
-	_putchar('\n');
+	putchar(10);
 }
