@@ -2,18 +2,20 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: An input string
- *
- * Description: returns the length of a string
+ * @s: string being counted
  * returns: Nothing
  */
 
-void _strlen(char *s)
+int _strlen(char *s)
 {
-	int len = 0;
+	int i;
 
-	while (s[len] != '\0')
-		len++;
+	i = 0;
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
 
-	return (len);
+	return (i);
 }
