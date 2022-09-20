@@ -2,20 +2,18 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: string being counted
- * returns: Nothing
+ * @s: a pointer starting
+ * returns: the len of a str
  */
 
 int _strlen(char *s)
 {
-	int i;
+	int length = 0;
 
-	i = 0;
-	while (*s != '\0')
+	while(s[length] != '\0')
 	{
-		i++;
-		s++;
+		length++;
 	}
 
-	return (i);
+	return (length);
 }
