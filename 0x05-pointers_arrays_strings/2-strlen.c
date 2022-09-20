@@ -3,10 +3,12 @@
 /**
  * _strlen - returns the length of a string
  * @s: An input string
+ *
+ * Description: returns the length of a string
  * returns: Nothing
  */
 
-int _strlen(char *s)
+void _strlen(char *s)
 {
 	int len = 0;
 
