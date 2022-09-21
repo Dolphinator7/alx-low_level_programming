@@ -3,7 +3,7 @@
 /**
  * puts_half - prints half of the string
  * @str: input
- *
+ * @s: a pointer to an int that will be changed
  * return: half the input
  */
 
@@ -18,7 +18,6 @@ void puts_half(char *str)
 	}
 
 	str = (s[u] / 2);
-	while (s[u] != '\0')
 	{
 		_putchar(*str);
 		str++;
