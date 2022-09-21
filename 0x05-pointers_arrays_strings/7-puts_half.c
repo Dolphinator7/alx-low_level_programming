@@ -2,8 +2,8 @@
 
 /**
  * puts_half - prints half of the string
- *@str: input
- *@s: a pointer starting
+ * @str: input
+ *
  * return: half the input
  */
 
