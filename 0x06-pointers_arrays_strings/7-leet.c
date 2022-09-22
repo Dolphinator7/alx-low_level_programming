@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * leet - function that encode a string
+ * leet - a leet function
  * @x: param x
  * Return: string
  */
-
 char *leet(char *x)
 {
 	int a = 0, b, l = 5;
