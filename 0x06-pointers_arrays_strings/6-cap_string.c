@@ -2,32 +2,27 @@
 
 /**
  * cap_string - function that capitalize first character of a word
- * @str: string to capitalize
- * return: returns the capitalized string
+ * @x: string param
+ * Return: string
  */
 
-char *cap_string(char *str)
+char *cap_string(char *x)
 {
-	int index = 0;
+	char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}' };
 
-	while (str[++index])
+	int len = 13;
+	int a = 0, i;
+
+	while (x[a])
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		is (str[index -1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		i = 0;
+		while (i < len)
+		{
+			if ((a == 0 || s[a-1] == spc[i]) && (s[a] >= 97 && s[a] <=22))
+				s[a] = s[a] - 32;
+			i++;
+		}
+		a++;
 	}
-	return (str);
+	return (x);
 }
