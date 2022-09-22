@@ -6,12 +6,17 @@
  */
 char *leet(char *x)
 {
-	int a = 0;
+	int a = 0, b;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (x[a] != '\0')
+	while (x[++a])
 	{
-		x[a] == transform(x[a]);
-		a++;
+		for (b = 0; b <= 7; b++)
+		{
+			if (x[a] == leet[b] ||
+			x[a] - 32 == leet[b])
+				x[a] = b + '0';
+		}
 	}
 	return (x);
 }
