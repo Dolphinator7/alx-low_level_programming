@@ -1,6 +1,6 @@
 /*
  * File: 1-create_file.c
- * Auth: Gedeon Obae Gekonge
+ * Auth: Peterside Udogwu
  */
 
 #include "main.h"

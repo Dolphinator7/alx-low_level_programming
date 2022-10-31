@@ -1,6 +1,6 @@
 /*
  * File: 3-cp.c
- * Auth: Gedeon Obae Gekonge
+ * Auth: Peterside Udogwu
  */
 
 #include "main.h"

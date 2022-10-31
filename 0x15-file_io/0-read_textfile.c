@@ -1,6 +1,6 @@
 /*
  * File: 0-read_textfile.c
- * Auth: Gedeon Obae Gekonge
+ * Auth: Peterside Udogwu
  */
 
 #include "main.h"
