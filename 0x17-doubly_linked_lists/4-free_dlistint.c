@@ -1,25 +1,19 @@
 #include "lists.h"
-/**
- * get_nodeint_at_index - gets a node of linked list at specific index
- * @head: head of list
- * @index: index to pull node from
- *
- * Return: pointer to node at specified index, NULL if not found
- */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
-{
-	unsigned int ctr = 0;
-	listint_t *temp_h;
 
-	if (!head) /* EMPTY list */
-		return (NULL);
-	temp_h = head;
-	while (temp_h)
+/**
+ * free_dlistint - frees a doubly linked list
+ * @head: pointer to head of doubly linked list to free
+ *
+ * Return: always void
+ */
+void free_dlistint(dlistint_t *head)
+{
+	dlistint_t *temp;
+
+	while (head)
 	{
-		if (ctr == index)
-			return (temp_h);
-		temp_h = temp_h->next;
-		ctr++;
+		temp = head->next;
+		free(head);
+		head = temp;
 	}
-	return (NULL); /* didn't find node */
 }

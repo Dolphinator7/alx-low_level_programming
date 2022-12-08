@@ -1,37 +1,40 @@
 #include "lists.h"
-/**
- * delete_nodeint_at_index - deletes an element of linked list at index
- * @head: head of list
- * @index: index to delete node at
- *
- * Return: 1 if succeded, -1 if it fails
- */
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
-{
-	unsigned int ctr = 0;
-	listint_t *temp_h, *temp_node;
+#include <stdlib.h>
 
-	if (!*head) /* EMPTY list */
-		return (-1);
-	temp_h = *head;
-	if (index == 0)
+/**
+ * delete_dnodeint_at_index - inserts a node at position
+ * in a doubly linked list
+ * @h: double pointer to the head, so we can modify if needed
+ * @index: index to insert new node at
+ *
+ * Return: 1 (success), -1 (failure)
+ */
+int delete_dnodeint_at_index(dlistint_t **h, unsigned int index)
+{
+	dlistint_t *temp = NULL;
+	unsigned int i = 0;
+
+	if (!h || !(*h)) /* NULL DLL */
 	{
-		temp_node = temp_h->next;
-		*head = temp_node;
-		free(temp_h);
+		return (-1);
+	}
+	else /* DLL exists */
+	{
+		temp = *h;
+		/* advance to pos of idx in DLL */
+		while (index != i++ && temp)
+			temp = temp->next;
+		if (!temp) /* end of DLL */
+			return (-1);
+		if (temp->next)
+			temp->next->prev = temp->prev;
+		if (index == 0) /* delete at head */
+			*h = temp->next;
+		else
+			temp->prev->next = temp->next;
+		free(temp);
 		return (1);
 	}
-	while (temp_h)
-	{
-		if (ctr + 1 == index) /* delete node here */
-		{
-			temp_node = temp_h->next;
-			temp_h->next = temp_node->next;
-			free(temp_node);
-			return (1);
-		}
-		temp_h = temp_h->next;
-		ctr++;
-	}
-	return (-1); /* didn't find node */
+	/* should never happen, here for compiler */
+	return (-1);
 }

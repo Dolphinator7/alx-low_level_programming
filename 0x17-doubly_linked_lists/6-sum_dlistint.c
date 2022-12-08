@@ -1,22 +1,19 @@
 #include "lists.h"
+
 /**
- * sum_listint - sums the n value of a linked list of listint_t
- * @head: head of list
+ * sum_dlistint - sums a doubly linked list
+ * @head: pointer to head of DLL
  *
- * Return: integer represetnting sum of all n values from list
+ * Return: sum of all elements of the DLL, 0 if DLL is NULL
  */
-int sum_listint(listint_t *head)
+int sum_dlistint(dlistint_t *head)
 {
 	int sum = 0;
-	listint_t *temp_h;
 
-	if (!head)
-		return (0);
-	temp_h = head;
-	while (temp_h)
+	while (head)
 	{
-		sum += temp_h->n;
-		temp_h = temp_h->next;
+		sum += head->n;
+		head = head->next;
 	}
 	return (sum);
 }

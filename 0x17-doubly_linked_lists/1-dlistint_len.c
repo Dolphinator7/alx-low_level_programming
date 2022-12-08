@@ -1,21 +1,21 @@
 #include "lists.h"
-#include <stdio.h>
-/**
- * listint_len - gets number of elements in linked list containing ints
- * @h: head of listint_t type
- *
- * Return: size_t, number of nodes.
- */
-size_t listint_len(const listint_t *h)
-{
-	size_t n_nodes = 0;
-	const listint_t *temp_h;
 
-	temp_h = h;
-	while (temp_h)
+/**
+ * dlistint_len - gets the length of a doubly linked list
+ * @h: head of doubly linked list (DLL)
+ *
+ * Return: number of nodes in DLL
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t nodes = 0;
+	const dlistint_t *temp;
+
+	temp = h;
+	while (temp)
 	{
-		temp_h = temp_h->next;
-		n_nodes++;
+		temp = temp->next;
+		nodes++;
 	}
-	return (n_nodes);
+	return (nodes);
 }
